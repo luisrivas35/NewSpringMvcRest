@@ -12,7 +12,7 @@ pipeline {
                    sh "/var/jenkins_home/sonar/bin/sonar-scanner \
                    -Dsonar.projectKey=Demo1 \
                    -Dsonar.sources=. \
-                   -Dsonar.host.url=http://localhost:9000 \
+                   -Dsonar.host.url=http://192.168.100.13:9000 \
                    -Dsonar.login=squ_1b7bd1baab237ff86d7e54c37f9aa0f24eb941b3"
                        
                    }
