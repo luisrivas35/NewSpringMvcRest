@@ -6,9 +6,18 @@ pipeline {
                 echo "Esta es el inicio"
             }
         }
-        stage('Sonar'){
+        stage('Sonarqube quality check'){
             steps{
-                sh '/var/jenkins_home/sonar/bin/sonar-scanner'
+                script {
+                def scannerHome = tool 'sonarqube';
+                   withSonarQubeEnv("sonarqube-container") {
+                   sh "${tool("sonarqube")}/var/jenkins_home/sonar/bin/sonar-scanner \
+                   -Dsonar.projectKey=test \
+                   -Dsonar.sources=. \
+                   -Dsonar.host.url=http://localhost:9000 \
+                   -Dsonar.login=squ_1b7bd1baab237ff86d7e54c37f9aa0f24eb941b3"
+                       }
+                   }
             }
         }    
         stage('Build') {
