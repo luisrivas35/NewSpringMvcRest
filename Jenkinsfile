@@ -14,7 +14,6 @@ pipeline {
                    -Dsonar.projectName=Demo1 \
                    -Dsonar.projectVersion=1 \
                    -Dsonar.scm.disabled=true \
-                   -Dsonar.projectDescription=Proyecto de Demo \
                    -Dsonar.sources=. \
                    -Dsonar.language=java \
                    -Dsonar.java.binaries=./target/classes \
