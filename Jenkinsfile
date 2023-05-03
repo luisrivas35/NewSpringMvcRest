@@ -6,6 +6,11 @@ pipeline {
                 echo "Esta es el inicio"
             }
         }
+        stage('Sonar'){
+            steps{
+                sh '/var/jenkins_home/sonar/bin/sonar-scanner'
+            }
+        }    
         stage('Build') {
             steps {
                 sh 'mvn -B package'
