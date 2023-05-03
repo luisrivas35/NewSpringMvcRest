@@ -11,7 +11,14 @@ pipeline {
                 script {
                    sh "/var/jenkins_home/sonar/bin/sonar-scanner \
                    -Dsonar.projectKey=Demo1 \
+                   -Dsonar.projectName=Demo1 \
+                   -Dsonar.projectVersion=1 \
+                   -Dsonar.scm.disabled=true \
+                   -Dsonar.projectDescription=Proyecto de Demo \
                    -Dsonar.sources=. \
+                   -Dsonar.language=java \
+                   -Dsonar.java.binaries=./target/classes \
+                   -Dsonar.sourceEncoding=UTF-8 \
                    -Dsonar.host.url=http://192.168.100.13:9000 \
                    -Dsonar.login=squ_1b7bd1baab237ff86d7e54c37f9aa0f24eb941b3"
                        
