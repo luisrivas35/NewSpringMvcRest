@@ -71,9 +71,9 @@ pipeline {
         } 
         
     }
-    post{
-        always{
-            slackSend( color: "#439FE0", channel: "#fundamentos-de-devops", "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)")
+    post {
+        always {
+            slackSend color: "#439FE0", channel: "#fundamentos-de-devops", "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
         }
     } 
 }
