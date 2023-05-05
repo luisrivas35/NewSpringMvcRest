@@ -69,7 +69,7 @@ pipeline {
             }
         
             } 
-        stage('Notications'); {
+        stage('Notications') {
             post {
                 success {
                     slackSend "Build deployed successfully - ${env.JOB_NAME} ${env.BUILD_NUMBER} (<${env.BUILD_URL}|Open>)"
