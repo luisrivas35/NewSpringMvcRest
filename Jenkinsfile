@@ -71,5 +71,9 @@ pipeline {
         } 
         
     }
-    
+    post {
+        always {
+            slackSend channel: 'fundamentos-de-devops', color: 'red', iconEmoji: ':ok_hand:', message: 'Todo salio OK', teamDomain: 'sustantivagrupo', tokenCredentialId: 'slack_token', username: 'super_admin'
+        }
+    } 
 }
