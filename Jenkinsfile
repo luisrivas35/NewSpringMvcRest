@@ -19,7 +19,7 @@ pipeline {
                 -Dsonar.java.binaries=./target/classes \
                 -Dsonar.sourceEncoding=UTF-8 \
                 -Dsonar.host.url=http://192.168.100.13:9000 \
-                -Dsonar.login=squ_1b7bd1baab237ff86d7e54c37f9aa0f24eb941b3"
+                -Dsonar.login=squ_344a8a235c135a9fa48250c7a04043b3e716225d"
                     
                 }
             }
@@ -54,7 +54,7 @@ pipeline {
                             groupId: pom.groupId,
                             version: pom.version,
                             repository: "repo-nexus",
-                            credentialsId: "d085a0a2-dbd8-487b-a2c1-6115c90a1e6e",
+                            credentialsId: "7117635c-aa78-357f-b3a5-1eb6444958f6",
                             artifacts: [
                                 [artifactId: pom.artifactId,
                                         classifier: '',
